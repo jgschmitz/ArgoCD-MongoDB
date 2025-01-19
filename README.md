@@ -1,4 +1,6 @@
 ### ArgoCD and MongoDB Deployment in Kubernetes
+![ArgoCD MongoDB Deployment](https://drive.google.com/uc?id=1kWfwyKPI2aw3JMXG0QlnQ1Ogl2mkxqV0)
+
 
 #### Step 1: Install ArgoCD
 
