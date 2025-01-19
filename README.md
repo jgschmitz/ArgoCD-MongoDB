@@ -102,3 +102,5 @@ kubectl logs -l app=mongodb-kubernetes-operator -n default
 
 ### Final Step: Enjoy Your ArgoCD-Powered MongoDB Deployment
 Your deployment is complete and should resemble the screenshot below. You can manage your MongoDB cluster using the ArgoCD UI and monitor its health and synchronization status.
+
+![ArgoCD MongoDB Deployment](https://drive.google.com/uc?id=1kWfwyKPI2aw3JMXG0QlnQ1Ogl2mkxqV0)
