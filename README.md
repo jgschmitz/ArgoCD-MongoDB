@@ -83,7 +83,7 @@ spec:
       selfHeal: true
 ```
 
-2. Apply the YAML:
+2. Apply the YAML: (you can also do this in the ArgoCD UI) 
 ```
 kubectl apply -f darkstar-application.yaml -n argocd
 ```
