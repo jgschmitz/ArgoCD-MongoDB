@@ -53,7 +53,7 @@ chmod +x /usr/local/bin/argocd
 argocd login localhost:8080 --username admin --password <password>
 ```
 
-#### Step 5: Deploy MongoDB using ArgoCD
+### Step 5: Deploy MongoDB using ArgoCD
 
 1. Create an ArgoCD Application YAML:
 ```
@@ -91,7 +91,7 @@ kubectl apply -f darkstar-application.yaml -n argocd
    - Login with the username `admin` and the password retrieved earlier.
    - Verify that the `darkstar` application is synced and healthy.
 
-#### Step 6: Validate MongoDB Deployment
+### Step 6: Validate MongoDB Deployment
 ```bash
 # Check the status of the MongoDB Kubernetes resources
 kubectl get all -n default
@@ -100,5 +100,5 @@ kubectl get all -n default
 kubectl logs -l app=mongodb-kubernetes-operator -n default
 ```
 
-#### Final Step: Enjoy Your ArgoCD-Powered MongoDB Deployment
+### Final Step: Enjoy Your ArgoCD-Powered MongoDB Deployment
 Your deployment is complete and should resemble the screenshot below. You can manage your MongoDB cluster using the ArgoCD UI and monitor its health and synchronization status.
