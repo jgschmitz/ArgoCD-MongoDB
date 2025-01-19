@@ -18,7 +18,7 @@ kubectl get pods -n argocd
 ```
 
 #### Step 2: Expose the ArgoCD Server
-# Option A: Use port-forwarding for local access
+### Option A: Use port-forwarding for local access
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
@@ -33,13 +33,13 @@ kubectl get svc -n argocd
 ```
 
 #### Step 3: Retrieve ArgoCD Admin Password
-# Retrieve the default admin password
+### Retrieve the default admin password
 ```
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 ```
 
 #### Step 4: Install the ArgoCD CLI (Optional but Recommended)
-# MacOS (using Homebrew)
+### MacOS (using Homebrew)
 ```
 brew install argocd
 ```
