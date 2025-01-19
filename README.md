@@ -7,12 +7,12 @@ Create the argo namespace:
 kubectl create namespace argocd
 ```
 
-# Install ArgoCD using the official manifest
+### Install ArgoCD using the official manifest
 ```
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-# Check the status of ArgoCD pods
+### Check the status of ArgoCD pods
 ```
 kubectl get pods -n argocd
 ```
@@ -22,12 +22,12 @@ kubectl get pods -n argocd
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
-# Option B: Change the service type to LoadBalancer for external access
+### Option B: Change the service type to LoadBalancer for external access
 ```
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
 
-# Verify the external IP (if LoadBalancer is used)
+### Verify the external IP (if LoadBalancer is used)
 ```
 kubectl get svc -n argocd
 ```
@@ -43,12 +43,12 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ```
 brew install argocd
 ```
-# Linux
+### Linux
 ```
 curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 chmod +x /usr/local/bin/argocd
 ```
-# Login to ArgoCD
+### Login to ArgoCD
 ```
 argocd login localhost:8080 --username admin --password <password>
 ```
