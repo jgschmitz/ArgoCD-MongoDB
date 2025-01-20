@@ -50,7 +50,7 @@ brew install argocd
 curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 chmod +x /usr/local/bin/argocd
 ```
-### Login to ArgoCD
+### Login to ArgoCD (you can also just login via the UI)
 ```
 argocd login localhost:8080 --username admin --password <password>
 ```
