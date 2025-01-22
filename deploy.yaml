@@ -1,0 +1,22 @@
+# Save this as darkstar-application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: darkstar
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: charts/mongodb-operator
+    repoURL: https://github.com/mongodb/mongodb-kubernetes-operator
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - no-submodules=true
+    automated:
+      prune: true
+      selfHeal: true
